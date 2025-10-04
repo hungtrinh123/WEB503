@@ -28,7 +28,6 @@ export async function getPostById(req, res) {
 // Thêm mới post
 export async function addPost(req, res) {
   try {
-  const {title, content} = req.body;
     const newPost = await Post.create(req.body);
     return res.status(201).json(newPost);
   } catch (error) {
